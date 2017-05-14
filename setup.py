@@ -26,6 +26,7 @@ LICENSE = re.findall("__license__ = '([^']+)'", INIT_PY)[0]
 setup(
     name='Flask-Select2',
     packages=find_packages(),
+    include_package_data=True,
     version=VERSION,
     author=AUTHOR,
     author_email=EMAIL,
