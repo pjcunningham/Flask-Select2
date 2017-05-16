@@ -56,7 +56,7 @@ class Select2(object):
         app.extensions['select2'] = self
 
     def register_blueprint(self, app):
-        _module = Blueprint('select2', __name__, template_folder='templates', static_folder='static', static_url_path=app.static_url_path + '/flask_select2',)
+        _module = Blueprint('select2', __name__, template_folder='templates', static_folder='static', static_url_path='/static/flask_select2',)
         _module.add_url_rule(app.config['FLASK_SELECT2_RULE'], view_func=Select2View.as_view(app.config['FLASK_SELECT2_VIEW']))
         app.register_blueprint(_module)
         return _module
