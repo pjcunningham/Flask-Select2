@@ -1,9 +1,9 @@
 {% macro form_css() %}
-    <link href="{{ url_for('select2.static', filename='vendor/select2/select2.css', v='3.5.2') }}" rel="stylesheet">
-    <link href="{{ url_for('select2.static', filename='vendor/select2/select2-bootstrap3.css', v='1.4.6') }}" rel="stylesheet">
+    <link href="{{ url_for('static.select2', filename='vendor/select2/select2.css', v='3.5.2') }}" rel="stylesheet">
+    <link href="{{ url_for('static.select2', filename='vendor/select2/select2-bootstrap3.css', v='1.4.6') }}" rel="stylesheet">
 {% endmacro %}
 
 {% macro form_js() %}
-    <script src="{{ url_for('select2.static', filename='vendor/select2/select2.min.js', v='3.5.2') }}" type="text/javascript"></script>
-    <script src="{{ url_for('select2.static', filename='js/form.js', v='1.0.1') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static.select2', filename='vendor/select2/select2.min.js', v='3.5.2') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static.select2', filename='js/form.js', v='1.0.1') }}" type="text/javascript"></script>
 {% endmacro %}
