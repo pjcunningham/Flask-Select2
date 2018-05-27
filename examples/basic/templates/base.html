@@ -1,0 +1,20 @@
+{%- extends "bootstrap/base.html" %}
+{% import "flask_select2/lib.html" as select2 %}
+{% import "bootstrap/fixes.html" as fixes %}
+
+{% block title %}Flask-Select2{% endblock %}
+
+{% block head %}
+    {{super()}}
+    {{fixes.ie8()}}
+{%- endblock %}
+
+{% block styles %}
+    {{ super() }}
+    {{ select2.form_css() }}
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    {{ select2.form_js() }}
+{% endblock %}
