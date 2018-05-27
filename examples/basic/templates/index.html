@@ -1,0 +1,54 @@
+{%- extends "base.html" %}
+
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block content %}
+<div class="container">
+    {%- with messages = get_flashed_messages(with_categories=True) %}
+    {%- if messages %}
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            {{utils.flashed_messages(messages, container=False, dismissible=True)}}
+        </div>
+    </div>
+    {%- endif %}
+    {%- endwith %}
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="jumbotron">
+                <h2>Company Lookup Demo</h2>
+                <ul>
+                    <li><a href="http://flask-sqlalchemy.pocoo.org" target="_blank">Flask-Sqlalchemy</a></li>
+                    <li><a href="https://pythonhosted.org/Flask-Bootstrap/" target="_blank">Flask-Bootstrap</a></li>
+                    <li><a href="https://flask-wtf.readthedocs.io/en/stable/" target="_blank">Flask-WTF</a></li>
+                    <li><a href="https://faker.readthedocs.io" target="_blank">Faker</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-10 col-md-offset-1">
+
+        <form method="post">
+
+            {{ form.hidden_tag() }}
+            {{ wtf.form_field(form.single_company) }}
+            {{ wtf.form_field(form.multiple_company) }}
+            {{ wtf.form_field(form.single_company_allow_blank) }}
+
+            <div class="btn-toolbar pull-right">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+{%- endblock %}
+
+
