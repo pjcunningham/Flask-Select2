@@ -1,5 +1,5 @@
 
-.. image:: image1.jpg
+.. image:: with-flash-messages.jpg
 
 Simple example using SQlAlchemy 'ilike' to perform the filtering.
 
